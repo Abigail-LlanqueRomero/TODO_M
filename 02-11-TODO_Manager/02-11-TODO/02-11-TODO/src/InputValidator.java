@@ -25,6 +25,7 @@ public class InputValidator {
         return choice;
     }
 
+    //only valid id and no letters
     public static int getValidTaskId(Scanner scanner, String prompt) {
         int taskId = -1;
         boolean valid = false;
@@ -42,6 +43,7 @@ public class InputValidator {
         return taskId;
     }
 
+    // control format-> date is checked
     public static LocalDate getValidDateInput(Scanner scanner, String prompt) {
         LocalDate date = null;
         boolean valid = false;

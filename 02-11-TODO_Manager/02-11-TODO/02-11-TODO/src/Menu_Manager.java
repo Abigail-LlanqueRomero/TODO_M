@@ -7,6 +7,7 @@ public class Menu_Manager {
     private ArrayList<String> listNames;
     private Scanner scanner;
 
+    //call by reference ArrayList
     public Menu_Manager() {
         toDoLists = new ArrayList<>();
         listNames = new ArrayList<>();
@@ -15,6 +16,7 @@ public class Menu_Manager {
         ToDoList tbzTasks = ToDoList.createDefaultTBZTasks();
         ToDoList homeworkTasks = ToDoList.createDefaultHomeworkTasks();
 
+        //two separated-> names go to listname only
         toDoLists.add(tbzTasks);
         toDoLists.add(homeworkTasks);
         listNames.add("TBZ Tasks");
@@ -36,6 +38,7 @@ public class Menu_Manager {
 
             int choice = InputValidator.getValidChoice(scanner, 1, 6);
 
+            //connected with user input validator
             switch (choice) {
                 case 1:
                     LocalDate dueDate = InputValidator.getValidDateInput(scanner, "Enter due date (DD-MM-YYYY): ");

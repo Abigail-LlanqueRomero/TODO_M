@@ -6,6 +6,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+//AL-> call-by-reference
 public class ToDoList {
     private ArrayList<Task> tasks;
 
@@ -13,6 +14,7 @@ public class ToDoList {
         this.tasks = new ArrayList<>();
     }
 
+    //just examples hardcoded
     public static ToDoList createDefaultTBZTasks() {
         ToDoList tbzTasks = new ToDoList();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
@@ -63,7 +65,7 @@ public class ToDoList {
         }
         tasks.forEach(task -> System.out.println(task.getTaskDescription()));
     }
-
+    // eyport in .txt
     public void exportTasksToFile(String filePath) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
             writer.write("ID;Title;Description;Priority;Status;Due Date\n");
@@ -77,6 +79,7 @@ public class ToDoList {
         }
     }
 
+    // temporarly priority-> call-by value (demo)
     public void changeTaskPriorityFromUserInput(Scanner scanner, int taskId) {
         tasks.stream()
                 .filter(task -> task.getId() == taskId)

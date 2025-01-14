@@ -10,7 +10,6 @@ public class Task {
     private Priority priority;
     private LocalDate dueDate;
 
-
     public enum Priority {
         HIGH, MEDIUM, LOW;
 
