@@ -10,7 +10,6 @@ public class Task {
     private Priority priority;
     private LocalDate dueDate;
 
-    //General Structure of tasks
 
     public enum Priority {
         HIGH, MEDIUM, LOW;
@@ -41,16 +40,8 @@ public class Task {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public String getDescription() {
         return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public Priority getPriority() {
@@ -65,20 +56,12 @@ public class Task {
         return dueDate;
     }
 
-    public void setDueDate(LocalDate dueDate) {
-        this.dueDate = dueDate;
-    }
-
     public boolean isCompleted() {
         return completed;
     }
 
     public void markAsCompleted() {
         this.completed = true;
-    }
-
-    public boolean isOverdue() {
-        return !completed && dueDate.isBefore(LocalDate.now());
     }
 
     public String getTaskDescription() {
